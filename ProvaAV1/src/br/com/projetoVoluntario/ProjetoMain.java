@@ -12,13 +12,24 @@ public class ProjetoMain {
         System.out.println("<1> Cadastrar Projeto Distribuir Alimentos\n" + "\n" + "<2> Cadastrar Projeto Trabalho Voluntário\n" + "\n" + "<3> Sair");
         opcao = ler.nextInt();
 
+
         switch (opcao){
 
             case 1:
-                DistribuicaoAlimento distribuicaoAlimento = new DistribuicaoAlimento(descAlimento, qtde);
-                System.out.println("");
-
+                DistribuicaoAlimento distribuicaoAlimento = new DistribuicaoAlimento();
+                System.out.println(distribuicaoAlimento.validaProjeto() + distribuicaoAlimento.imprimeProjeto());
                 break;
+            case 2:
+                TrabalhoVoluntario trabalhoVoluntario = new TrabalhoVoluntario();
+                  System.out.println(trabalhoVoluntario.validaProjeto() + trabalhoVoluntario.imprimeProjeto());
+                  break;
+
+            case 3:
+                System.out.println("Até mais!");
+                break;
+            default:
+                System.out.println("Invalido");
+
         }
 
 
